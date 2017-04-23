@@ -7,40 +7,38 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class MainActivity extends Activity {
-
-    private MySurfaceView mGLSurfaceView;
-    static float screenWidth;//屏幕宽度
-    static float screenHeight;//屏幕高度
+    private MySurfaceView myGLSurfaceView;
+    static float screenWidth;
+    static float screenHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //设置为全屏
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        screenWidth = dm.widthPixels;            //dm.widthPixels    获取屏幕横向分辨率
-        screenHeight = dm.heightPixels;        //dm.heightPixels	获取屏幕竖向分辨率
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        screenWidth = displayMetrics.widthPixels;
+        screenHeight = displayMetrics.heightPixels;
 
-        //初始化GLSurfaceView
-        mGLSurfaceView = new MySurfaceView(this);
-        setContentView(mGLSurfaceView);
-        mGLSurfaceView.requestFocus();//获取焦点
-        mGLSurfaceView.setFocusableInTouchMode(true);//设置为可触控
+        myGLSurfaceView = new MySurfaceView(this);
+        setContentView(myGLSurfaceView);
+        myGLSurfaceView.requestFocus();
+        myGLSurfaceView.setFocusableInTouchMode(true);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mGLSurfaceView.onResume();
+        myGLSurfaceView.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mGLSurfaceView.onPause();
+        myGLSurfaceView.onPause();
     }
 }
