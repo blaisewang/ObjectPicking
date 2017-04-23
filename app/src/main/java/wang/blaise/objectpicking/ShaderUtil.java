@@ -73,18 +73,18 @@ class ShaderUtil {
         }
     }
 
-    static String loadFromAssetsFile(String filename, Resources r) {
+    static String loadFromAssetsFile(String filename, Resources resources) {
         String result = null;
         try {
-            InputStream in = r.getAssets().open(filename);
-            int ch;
+            InputStream inputStream = resources.getAssets().open(filename);
+            int object;
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            while ((ch = in.read()) != -1) {
-                byteArrayOutputStream.write(ch);
+            while ((object = inputStream.read()) != -1) {
+                byteArrayOutputStream.write(object);
             }
             byte[] byteArray = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();
-            in.close();
+            inputStream.close();
             result = new String(byteArray, "UTF-8");
             result = result.replaceAll("\\r\\n", "\n");
         } catch (Exception e) {

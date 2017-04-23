@@ -21,15 +21,15 @@ public class MySurfaceView extends GLSurfaceView {
     private float mPreviousY;
     private float mPreviousX;
 
-    private float cameraX = 0f;
-    private float cameraY = 0f;
-    private float cameraZ = 60f;
+    private float cameraX = 0.0f;
+    private float cameraY = 0.0f;
+    private float cameraZ = 60.0f;
 
-    private float targetX = 0f;
-    private float targetY = 0f;
-    private float targetZ = 0f;
-    private float angleDegreeElevation = 30f;
-    private float angleDegreeAzimuth = 180f;
+    private float targetX = 0.0f;
+    private float targetY = 0.0f;
+    private float targetZ = 0.0f;
+    private float angleDegreeElevation = 30.0f;
+    private float angleDegreeAzimuth = 180.0f;
     private float left;
     private float top;
     private float near;
@@ -188,8 +188,8 @@ public class MySurfaceView extends GLSurfaceView {
             left = right = ratio;
             float bottom;
             top = bottom = 1;
-            near = 2;
-            far = 500;
+            near = 2.0f;
+            far = 500.0f;
             MatrixState.setProjectFrustum(-left, right, -bottom, top, near, far);
             setCameraPosition();
         }

@@ -35,11 +35,11 @@ class MatrixState {
     }
 
     static void translate() {
-        Matrix.translateM(currentMatrix, 0, 0f, 0f, 10f);
+        Matrix.translateM(currentMatrix, 0, 0.0f, 0.0f, 10.0f);
     }
 
     static void rotate() {
-        Matrix.rotateM(currentMatrix, 0, (float) 180, 0f, 1.0f, 0f);
+        Matrix.rotateM(currentMatrix, 0, (float) 180, 0.0f, 1.0f, 0.0f);
     }
 
     static void scale(float x, float y, float z) {
@@ -55,7 +55,7 @@ class MatrixState {
             float targetY,
             float targetZ
     ) {
-        Matrix.setLookAtM(mVMatrix, 0, cameraX, cameraY, cameraZ, targetX, targetY, targetZ, 0f, 1f, 0f);
+        Matrix.setLookAtM(mVMatrix, 0, cameraX, cameraY, cameraZ, targetX, targetY, targetZ, 0.0f, 1.0f, 0.0f);
 
         float[] cameraLocation = new float[3];
         cameraLocation[0] = cameraX;

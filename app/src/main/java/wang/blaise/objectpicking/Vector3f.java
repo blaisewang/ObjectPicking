@@ -19,7 +19,7 @@ class Vector3f {
         this.z = z;
     }
 
-    Vector3f minus(Vector3f v) {
-        return new Vector3f(this.x - v.x, this.y - v.y, this.z - v.z);
+    Vector3f minus(Vector3f vector) {
+        return new Vector3f(this.x - vector.x, this.y - vector.y, this.z - vector.z);
     }
 }
