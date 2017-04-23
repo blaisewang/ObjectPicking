@@ -10,7 +10,7 @@ Click the section `Emulated Performance` `Graphics` to `Software GLSE 2.0`.
 
 ## Preview
 
-![](http://wx3.sinaimg.cn/large/9cbe429fly1fewz1mb4waj20u01hc750.jpg)  
+![](http://wx1.sinaimg.cn/large/9cbe429fly1fewzh5q2dmj20u01hc750.jpg)  
 
 
 ## Usage
